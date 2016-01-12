@@ -13,12 +13,12 @@ our $scenario = {
         {
             name => '1k-Math::BigInt',
             module=>'Math::BigInt',
-            code_template => 'my $val; for (1..1000) { $val = Math::BigInt->new(q(<num1>))+Math::BigInt->new(q(<num2>)) + Math::BigInt->new(q(<num1>)) * Math::BigInt->new(q(<num2>)) } $val'
+            code_template => 'my $val; for (1..1000) { $val = Math::BigInt->new(q(<num1>))+Math::BigInt->new(q(<num2>)) + Math::BigInt->new(q(<num1>)) * Math::BigInt->new(q(<num2>)) } "$val"'
         },
         {
             name => '1k-Math::GMP',
             module=>'Math::GMP',
-            code_template => 'my $val; for (1..1000) { $val = Math::GMP->new(q(<num1>))+Math::GMP->new(q(<num2>)) + Math::GMP->new(q(<num1>)) * Math::GMP->new(q(<num2>)) } $val'
+            code_template => 'my $val; for (1..1000) { $val = Math::GMP->new(q(<num1>))+Math::GMP->new(q(<num2>)) + Math::GMP->new(q(<num1>)) * Math::GMP->new(q(<num2>)) } "$val"'
         },
         {
             name => '1k-native',
@@ -27,8 +27,8 @@ our $scenario = {
         },
     ],
     datasets => [
-        {name=>'1e1', args=>{num1=>"10", num2=>"20"} },
-        {name=>'1e100', args=>{num1=>"1".("0"x100), num2=>"2".("0"x100)}, exclude_participant_tags=>['no-big'] },
+        {name=>'1e1', args=>{num1=>"10", num2=>"20"}, result=>"230" },
+        {name=>'1e100', args=>{num1=>"1".("0"x100), num2=>"2".("0"x100)}, result=>("2".("0"x99)."3".("0"x100)), exclude_participant_tags=>['no-big'] },
     ],
 };
 
