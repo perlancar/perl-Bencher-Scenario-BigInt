@@ -13,12 +13,12 @@ our $scenario = {
         {
             name => '1k-Math::BigInt',
             module=>'Math::BigInt',
-            code_template => 'my $val; for (1..1000) { $val = Math::BigInt->new(q(<num1>))+Math::BigInt->new(q(<num2>)) + Math::BigInt->new(q(<num1>)) * Math::BigInt->new(q(<num2>)) } "$val"'
+            code_template => 'my $val; for (1..1000) { $val = Math::BigInt->new(<num1>)+Math::BigInt->new(<num2>) + Math::BigInt->new(<num1>) * Math::BigInt->new(<num2>) } "$val"'
         },
         {
             name => '1k-Math::GMP',
             module=>'Math::GMP',
-            code_template => 'my $val; for (1..1000) { $val = Math::GMP->new(q(<num1>))+Math::GMP->new(q(<num2>)) + Math::GMP->new(q(<num1>)) * Math::GMP->new(q(<num2>)) } "$val"'
+            code_template => 'my $val; for (1..1000) { $val = Math::GMP->new(<num1>)+Math::GMP->new(<num2>) + Math::GMP->new(<num1>) * Math::GMP->new(<num2>) } "$val"'
         },
         {
             name => '1k-native',
