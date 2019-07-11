@@ -1,4 +1,4 @@
-0.03    2017-01-25 (PERLANCAR)
+0.03    2017-01-25  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -7,7 +7,7 @@
           type=x_benchmarks.
 
 
-0.02    2017-01-25 (PERLANCAR)
+0.02    2017-01-25  Released-By: PERLANCAR
 
         - [Bugfix] Fix double quoting.
 
@@ -16,6 +16,6 @@
           type=requires.
 
 
-0.01    2016-01-31 (PERLANCAR)
+0.01    2016-01-31  Released-By: PERLANCAR
 
         - First release.
