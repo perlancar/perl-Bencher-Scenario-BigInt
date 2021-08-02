@@ -2,3 +2,4 @@ Bencher-Scenario-BigInt-*
 .build
 *~
 nytprof*
+.DS_Store
